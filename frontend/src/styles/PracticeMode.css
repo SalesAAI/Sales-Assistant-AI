@@ -1,0 +1,264 @@
+/* Practice Mode Container */
+.practice-mode-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Component Transitions */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Practice Mode Components */
+.practice-component {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-component:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Practice Scenario Cards */
+.scenario-beginner {
+  background-color: #4CAF50;  /* Solid green */
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.scenario-advance {
+  background-color: #f44336;  /* Solid red */
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.scenario-beginner:hover {
+  background-color: rgba(76, 175, 80, 0.3);  /* Translucent green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.scenario-advance:hover {
+  background-color: rgba(244, 67, 54, 0.3);  /* Translucent red */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Control Buttons */
+.control-button {
+  min-width: 120px;
+  height: 48px;
+  border-radius: 24px;
+  font-weight: 500;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+.control-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.status-indicator.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-indicator.inactive {
+  background-color: #f5f5f5;
+  color: #757575;
+}
+
+/* Progress Animations */
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0.1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #2196f3;
+  animation: progress 2s ease-out;
+}
+
+/* Voice Visualization */
+.voice-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+}
+
+.wave-bar {
+  width: 3px;
+  height: 100%;
+  margin: 0 2px;
+  background-color: #2196f3;
+  animation: wave 1s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .practice-mode-container {
+    padding: 16px;
+  }
+
+  .control-button {
+    min-width: 100px;
+    height: 40px;
+  }
+
+  .status-indicator {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+/* Loading States */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #2196f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error States */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Success States */
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tooltip Styles */
+.custom-tooltip {
+  background-color: #424242;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  max-width: 220px;
+  text-align: center;
+}
+
+/* Focus States */
+.focus-outline:focus-visible {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .scenario-beginner {
+    background-color: #4CAF50;
+  }
+
+  .scenario-advance {
+    background-color: #f44336;
+  }
+
+  .scenario-beginner:hover {
+    background-color: rgba(76, 175, 80, 0.3);
+  }
+
+  .scenario-advance:hover {
+    background-color: rgba(244, 67, 54, 0.3);
+  }
+}
