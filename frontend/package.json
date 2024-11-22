@@ -2,7 +2,7 @@
   "name": "salesaai-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://salesaai.github.io/Sales-Assistant-AI",
+  "homepage": "/Sales-Assistant-AI/",
   "dependencies": {
     "@babel/runtime": "^7.22.10",
     "@emotion/react": "^11.11.1",
