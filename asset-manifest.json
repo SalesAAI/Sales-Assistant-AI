@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Sales-Assistant-AI/static/css/main.de49a73a.css",
-    "main.js": "/Sales-Assistant-AI/static/js/main.ee5fd3f3.js",
+    "main.js": "/Sales-Assistant-AI/static/js/main.48f897da.js",
     "index.html": "/Sales-Assistant-AI/index.html",
     "main.de49a73a.css.map": "/Sales-Assistant-AI/static/css/main.de49a73a.css.map",
-    "main.ee5fd3f3.js.map": "/Sales-Assistant-AI/static/js/main.ee5fd3f3.js.map"
+    "main.48f897da.js.map": "/Sales-Assistant-AI/static/js/main.48f897da.js.map"
   },
   "entrypoints": [
     "static/css/main.de49a73a.css",
-    "static/js/main.ee5fd3f3.js"
+    "static/js/main.48f897da.js"
   ]
 }
